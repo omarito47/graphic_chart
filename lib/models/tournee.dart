@@ -1,8 +1,8 @@
 class Tournee {
-  final String mois;
-  final int annee;
-  final int realises;
-  final List<TourneeDate> dates;
+   String? mois;
+   int? annee;
+   int? realises;
+   List<TourneeDate>? dates;
 
   Tournee({
     required this.mois,
@@ -27,7 +27,7 @@ class Tournee {
   }
 
   Map<String, dynamic> toJson() {
-    final List<Map<String, dynamic>> datesJson = dates.map((date) => date.toJson()).toList();
+    final List<Map<String, dynamic>> datesJson = dates!.map((date) => date.toJson()).toList();
 
     return {
       'mois': mois,
@@ -39,8 +39,8 @@ class Tournee {
 }
 
 class TourneeDate {
-  final int jour;
-  final int realises;
+  int? jour;
+  int? realises;
 
   TourneeDate({
     required this.jour,
