@@ -142,7 +142,7 @@ class _MyHomePageState extends State<_MyHomePage> {
                       children: [
                         Container(
                           height: MediaQuery.of(context).size.height * .8,
-                      width: MediaQuery.of(context).size.width ,
+                          width: MediaQuery.of(context).size.width,
                           child: SfCartesianChart(
                             primaryXAxis: CategoryAxis(),
                             // Chart title
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<_MyHomePage> {
                             // Enable legend
                             legend: Legend(isVisible: true),
                             enableAxisAnimation: true,
-                          
+
                             // Enable tooltip
                             tooltipBehavior: TooltipBehavior(enable: true),
                             series: <CartesianSeries<TourneeDate, String>>[
@@ -187,7 +187,7 @@ class _MyHomePageState extends State<_MyHomePage> {
                                       listDates.realises,
                                   name: "Mars",
                                   animationDelay: 3.0,
-                          
+
                                   // Enable data label
                                   dataLabelSettings:
                                       DataLabelSettings(isVisible: true)),
@@ -475,6 +475,8 @@ class _MyHomePageState extends State<_MyHomePage> {
                         title: ChartTitle(text: ''),
                         // Enable legend
                         legend: Legend(isVisible: true),
+                        enableAxisAnimation: true,
+
                         // Enable tooltip
                         tooltipBehavior: TooltipBehavior(enable: true),
                         series: <CartesianSeries<MonthData, String>>[
@@ -506,33 +508,37 @@ class _MyHomePageState extends State<_MyHomePage> {
                       ),
                     ),
                   if (selectedPeriod == "annee")
-                    Container(
-                      height: MediaQuery.of(context).size.height * .8,
-                      width: MediaQuery.of(context).size.width,
-                      child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
-                        // Chart title
-                        title: ChartTitle(text: ''),
-                        // Enable legend
-                        legend: Legend(isVisible: true),
-                        // Enable tooltip
-                        tooltipBehavior: TooltipBehavior(enable: true),
-                        series: <CartesianSeries<Tournee, String>>[
-                          LineSeries<Tournee, String>(
-                              color: Colors.amber,
-                              dataSource: tours,
-                              xValueMapper: (Tournee tour, _) =>
-                                  tour.annee.toString(),
-                              yValueMapper: (Tournee tour, _) {
-                                return tour.realises;
-                              },
-                              name: "nombre de tournées réalisées",
-                              animationDelay: 3.0,
-                              // Enable data label
-                              dataLabelSettings:
-                                  DataLabelSettings(isVisible: true)),
-                        ],
-                      ),
+                    Builder(
+                      builder: (context) {
+                        return Container(
+                          height: MediaQuery.of(context).size.height * .8,
+                          width: MediaQuery.of(context).size.width,
+                          child: SfCartesianChart(
+                            primaryXAxis: CategoryAxis(),
+                            // Chart title
+                            title: ChartTitle(text: ''),
+                            // Enable legend
+                            legend: Legend(isVisible: true),
+                            // Enable tooltip
+                            tooltipBehavior: TooltipBehavior(enable: true),
+                            series: <CartesianSeries<Tournee, String>>[
+                              LineSeries<Tournee, String>(
+                                  color: Colors.amber,
+                                  dataSource: tours,
+                                  xValueMapper: (Tournee tour, _) =>
+                                      tour.annee.toString(),
+                                  yValueMapper: (Tournee tour, _) {
+                                    return tour.realises;
+                                  },
+                                  name: "nombre de tournées réalisées",
+                                  animationDelay: 3.0,
+                                  // Enable data label
+                                  dataLabelSettings:
+                                      DataLabelSettings(isVisible: true)),
+                            ],
+                          ),
+                        );
+                      }
                     ),
                 ]),
               )
