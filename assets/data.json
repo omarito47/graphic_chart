@@ -1,137 +1,446 @@
 {
-    "tours": [
-      {
-        "mois": "Mars",
-        "annee": 2023,
-        "realises": 25,
-        "dates": [
-          {
-            "jour": 12,
-            "realises": 1
-          },
-          {
-            "jour": 17,
-            "realises": 3
-          },
-          {
-            "jour": 25,
-            "realises": 2
-          }
-        ]
-      },
-      {
-        "mois": "Avril",
-        "annee": 2023,
-        "realises": 18,
-        "dates": [
-          {
-            "jour": 5,
-            "realises": 2
-          },
-          {
-            "jour": 14,
-            "realises": 1
-          },
-          {
-            "jour": 23,
-            "realises": 3
-          }
-        ]
-      },
-      {
-        "mois": "Mai",
-        "annee": 2023,
-        "realises": 30,
-        "dates": [
-          {
-            "jour": 2,
-            "realises": 4
-          },
-          {
-            "jour": 10,
-            "realises": 2
-          },
-          {
-            "jour": 19,
-            "realises": 3
-          }
-        ]
-      },
-      {
-        "mois": "Juin",
-        "annee": 2023,
-        "realises": 22,
-        "dates": [
-          {
-            "jour": 7,
-            "realises": 1
-          },
-          {
-            "jour": 16,
-            "realises": 2
-          },
-          {
-            "jour": 28,
-            "realises": 3
-          }
-        ]
-      },
-      {
-        "mois": "Juillet",
-        "annee": 2023,
-        "realises": 27,
-        "dates": [
-          {
-            "jour": 4,
-            "realises": 2
-          },
-          {
-            "jour": 13,
-            "realises": 3
-          },
-          {
-            "jour": 21,
-            "realises": 1
-          }
-        ]
-      },
-      {
-        "mois": "Août",
-        "annee": 2023,
-        "realises": 20,
-        "dates": [
-          {
-            "jour": 8,
-            "realises": 1
-          },
-          {
-            "jour": 16,
-            "realises": 2
-          },
-          {
-            "jour": 25,
-            "realises": 1
-          }
-        ]
-      },
-      {
-        "mois": "Septembre",
-        "annee": 2023,
-        "realises": 23,
-        "dates": [
-          {
-            "jour": 2,
-            "realises": 2
-          },
-          {
-            "jour": 10,
-            "realises": 3
-          },
-          {
-            "jour": 19,
-            "realises": 1
-          }
-        ]
-      }
-    ]
-  }
+  "tours": [
+    {
+      "annee": 2023,
+      "realises": 133,
+      "months": [
+        {
+          "mois": "janvier",
+          "realises": 9,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 2
+            },
+            {
+              "jour": 2,
+              "realises": 3
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "février",
+          "realises": 13,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 4
+            },
+            {
+              "jour": 2,
+              "realises": 3
+            },
+            {
+              "jour": 3,
+              "realises": 6
+            }
+          ]
+        }, {
+          "mois": "Mars",
+          "realises": 7,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 2
+            },
+            {
+              "jour": 2,
+              "realises": 1
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "Avril",
+          "realises": 9,
+          "dates": [
+            {
+              "jour": 12,
+              "realises": 5
+            },
+            {
+              "jour": 2,
+              "realises": 3
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "Mai",
+          "realises": 10,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 4
+            },
+            {
+              "jour": 2,
+              "realises": 3
+            },
+            {
+              "jour": 3,
+              "realises": 3
+            }
+          ]
+        },
+        {
+          "mois": "Juin",
+          "realises": 7,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 3
+            },
+            {
+              "jour": 2,
+              "realises": 1
+            },
+            {
+              "jour": 3,
+              "realises": 3
+            }
+          ]
+        },
+        {
+          "mois": "Juillet",
+          "realises": 10,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 4
+            },
+            {
+              "jour": 2,
+              "realises": 2
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "Août",
+          "realises": 4,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 2
+            },
+            {
+              "jour": 2,
+              "realises": 1
+            },
+            {
+              "jour": 3,
+              "realises": 1
+            }
+          ]
+        },
+        {
+          "mois": "Septembre",
+          "realises": 15,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 5
+            },
+            {
+              "jour": 2,
+              "realises": 6
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "October",
+          "realises": 14,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 4
+            },
+            {
+              "jour": 2,
+              "realises": 4
+            },
+            {
+              "jour": 3,
+              "realises": 6
+            }
+          ]
+        },
+        {
+          "mois": "November",
+          "realises": 20,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 7
+            },
+            {
+              "jour": 2,
+              "realises": 6
+            },
+            {
+              "jour": 3,
+              "realises": 6
+            }
+          ]
+        },
+        {
+          "mois": "December",
+          "realises": 15,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 6
+            },
+            {
+              "jour": 2,
+              "realises": 6
+            },
+            {
+              "jour": 3,
+              "realises": 3
+            }
+          ]
+        }
+      ]
+    },{
+      "annee": 2024,
+      "realises": 140,
+      "months": [
+        {
+          "mois": "janvier",
+          "realises": 10,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 3
+            },
+            {
+              "jour": 2,
+              "realises": 3
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "février",
+          "realises": 14,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 5
+            },
+            {
+              "jour": 2,
+              "realises": 3
+            },
+            {
+              "jour": 3,
+              "realises": 6
+            }
+          ]
+        }, {
+          "mois": "Mars",
+          "realises": 8,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 3
+            },
+            {
+              "jour": 2,
+              "realises": 1
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "Avril",
+          "realises": 10,
+          "dates": [
+            {
+              "jour": 12,
+              "realises": 6
+            },
+            {
+              "jour": 2,
+              "realises": 3
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "Mai",
+          "realises": 11,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 4
+            },
+            {
+              "jour": 2,
+              "realises": 4
+            },
+            {
+              "jour": 3,
+              "realises": 3
+            }
+          ]
+        },
+        {
+          "mois": "Juin",
+          "realises": 8,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 3
+            },
+            {
+              "jour": 2,
+              "realises": 2
+            },
+            {
+              "jour": 3,
+              "realises": 3
+            }
+          ]
+        },
+        {
+          "mois": "Juillet",
+          "realises": 11,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 5
+            },
+            {
+              "jour": 2,
+              "realises": 2
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "Août",
+          "realises": 5,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 2
+            },
+            {
+              "jour": 2,
+              "realises": 2
+            },
+            {
+              "jour": 3,
+              "realises": 1
+            }
+          ]
+        },
+        {
+          "mois": "Septembre",
+          "realises": 12,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 3
+            },
+            {
+              "jour": 2,
+              "realises": 6
+            },
+            {
+              "jour": 3,
+              "realises": 4
+            }
+          ]
+        },
+        {
+          "mois": "October",
+          "realises": 14,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 4
+            },
+            {
+              "jour": 2,
+              "realises": 4
+            },
+            {
+              "jour": 3,
+              "realises": 6
+            }
+          ]
+        },
+        {
+          "mois": "November",
+          "realises": 18,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 5
+            },
+            {
+              "jour": 2,
+              "realises": 6
+            },
+            {
+              "jour": 3,
+              "realises": 6
+            }
+          ]
+        },
+        {
+          "mois": "December",
+          "realises": 15,
+          "dates": [
+            {
+              "jour": 1,
+              "realises": 6
+            },
+            {
+              "jour": 2,
+              "realises": 6
+            },
+            {
+              "jour": 3,
+              "realises": 3
+            }
+          ]
+        }
+      ]
+    }
+    
+  ]
+}

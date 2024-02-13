@@ -1,46 +1,66 @@
 class Tournee {
-   String? mois;
-   int? annee;
-   int? realises;
-   List<TourneeDate>? dates;
+  int annee;
+  int realises;
+  List<MonthData> months;
 
   Tournee({
-    required this.mois,
     required this.annee,
     required this.realises,
-    required this.dates,
+    required this.months,
   });
 
   factory Tournee.fromJson(Map<String, dynamic> json) {
-    final mois = json['mois'] as String;
-    final annee = json['annee'] as int;
-    final realises = json['realises'] as int;
-    final List<dynamic> datesJson = json['dates'];
-    final dates = datesJson.map((dateJson) => TourneeDate.fromJson(dateJson)).toList();
-
     return Tournee(
-      mois: mois,
-      annee: annee,
-      realises: realises,
-      dates: dates,
+      annee: json['annee'],
+      realises: json['realises'],
+      months: List<MonthData>.from(
+        json['months'].map((month) => MonthData.fromJson(month)),
+      ),
     );
   }
 
   Map<String, dynamic> toJson() {
-    final List<Map<String, dynamic>> datesJson = dates!.map((date) => date.toJson()).toList();
-
     return {
-      'mois': mois,
       'annee': annee,
       'realises': realises,
-      'dates': datesJson,
+      'months': months.map((month) => month.toJson()).toList(),
+    };
+  }
+}
+
+class MonthData {
+  String mois;
+  int realises;
+  List<TourneeDate> dates;
+
+  MonthData({
+    required this.mois,
+    required this.realises,
+    required this.dates,
+  });
+
+  factory MonthData.fromJson(Map<String, dynamic> json) {
+    return MonthData(
+      mois: json['mois'],
+      realises: json['realises'],
+      dates: List<TourneeDate>.from(
+        json['dates'].map((date) => TourneeDate.fromJson(date)),
+      ),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'mois': mois,
+      'realises': realises,
+      'dates': dates.map((date) => date.toJson()).toList(),
     };
   }
 }
 
 class TourneeDate {
-  int? jour;
-  int? realises;
+  int jour;
+  int realises;
 
   TourneeDate({
     required this.jour,
@@ -48,12 +68,9 @@ class TourneeDate {
   });
 
   factory TourneeDate.fromJson(Map<String, dynamic> json) {
-    final jour = json['jour'] as int;
-    final realises = json['realises'] as int;
-
     return TourneeDate(
-      jour: jour,
-      realises: realises,
+      jour: json['jour'],
+      realises: json['realises'],
     );
   }
 
